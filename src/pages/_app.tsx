@@ -1,9 +1,9 @@
 import "../styles/global.scss";
 
-import Header from "./components/Header";
-import Player from "./components/Pĺayer";
+import Header from "../components/Header";
+import Player from "../components/Pĺayer";
 
-import styles from '../../styles/app.module.scss';
+import styles from '../styles/app.module.scss';
 
 
 function MyApp({ Component, pageProps }) {

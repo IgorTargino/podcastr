@@ -6,6 +6,7 @@
 
 :root {
   --white: #FFF;
+  --black: #000;
 
   --gray-50: #F7F8FA;
   --gray-100: #E6E8EB;
@@ -46,5 +47,10 @@ h2 {
 
 button {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray-800);
 }
 
