@@ -129,32 +129,6 @@
         "type": "audio/x-m4a",
         "duration": 1463
       }
-    },
-    {
-      "id": "tesssssssssssssssssssssste",      
-      "title": "loren ipstesssssssssssssssssssssste tesssssssssssssssssssssste",
-      "members": "pessoa 1, Higo Ribeiro e Guilherme Pellizzetti",
-      "published_at": "2020-04-04 20:00:00",
-      "thumbnail": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-podcastr/autenticacao.jpg",
-      "description": "<p>Três programadores conversam sobre estratégia de autenticação.</p><p>Vamos discutir quais aspectos você deve considerar na hora de fazer a sua escolha.</p><p>A gente passa a maior parte do tempo escrevendo código. Agora chegou o momento de falar sobre isso.</p>",
-      "file": {
-        "url": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-podcastr/audios/autenticacao.m4a",
-        "type": "audio/x-m4a",
-        "duration": 1500
-      }
-    },
-    {
-      "id": "teste2",      
-      "title": "loren ipstesssssssssssssssssssssste 2",
-      "members": "pessoa 1, Higo Ribeiro e Guilherme Pellizzetti",
-      "published_at": "2020-04-01 20:00:00",
-      "thumbnail": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-podcastr/autenticacao.jpg",
-      "description": "<p>Três programadores conversam sobre estratégia de autenticação.</p><p>Vamos discutir quais aspectos você deve considerar na hora de fazer a sua escolha.</p><p>A gente passa a maior parte do tempo escrevendo código. Agora chegou o momento de falar sobre isso.</p>",
-      "file": {
-        "url": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-podcastr/audios/autenticacao.m4a",
-        "type": "audio/x-m4a",
-        "duration": 1500
-      }
     }
   ]
 }
