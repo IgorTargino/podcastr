@@ -31,7 +31,6 @@ const Player = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const episode = episodeList[currentEpisodeIndex];
   
-
   useEffect(() => {
     if (!audioRef.current) return;
 
@@ -53,7 +52,7 @@ const Player = () => {
   }
 
   function handleEpisodeEnded() {
-    if( hasNext){
+    if(hasNext){
       playNext()
     } else {
       clearPlayerState();
