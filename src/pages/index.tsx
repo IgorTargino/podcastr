@@ -4,8 +4,9 @@ import Head from "next/head";
 import Link from "next/link";
 import ptBR from "date-fns/locale/pt-BR";
 import { format, parseISO } from "date-fns";
-import { useMediaQuery } from "react-responsive";
-import { isMobile, BrowserView, MobileView } from "react-device-detect";
+// import { useMediaQuery } from "react-responsive";
+// import { isMobile } from "react-device-detect";
+import { useWindowSize } from "../Hook/useWindowSize";
 
 import convertDurationToTimeString from "../utils/convertDurationToTimeString";
 
@@ -34,6 +35,8 @@ export default function Home({ lattestEpisodes, allEpisodes }: Props) {
   const { playList } = usePlayer();
 
   const episodeList = [...lattestEpisodes, ...allEpisodes];
+  const isMobile = useWindowSize().width <= 768 ? true : false;
+  console.log(isMobile);
 
   return (
     <div className={styles.homepage}>
