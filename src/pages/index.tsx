@@ -9,9 +9,11 @@ import { useWindowSize } from "../Hook/useWindowSize";
 import convertDurationToTimeString from "../utils/convertDurationToTimeString";
 
 import { usePlayer } from "../context/PlayerContext";
+import Loading from "../components/Loading";
 import api from "../services/api";
 
 import styles from "./home.module.scss";
+import { useState } from "react";
 
 type Episodes = {
   id: string;
@@ -30,11 +32,24 @@ type Props = {
 };
 
 export default function Home({ lattestEpisodes, allEpisodes }: Props) {
+  const [isLoading, setIsLoading] = useState(true);
+  
   const { playList } = usePlayer();
-
   const episodeList = [...lattestEpisodes, ...allEpisodes];
+  
   const isMobile = useWindowSize().width <= 768 ? true : false;
-  console.log(isMobile);
+
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 3000);
+
+  if (isLoading) {
+    return (
+      <>
+        <Loading />
+      </>
+    );
+  }
 
   return (
     <div className={styles.homepage}>

@@ -1,10 +1,38 @@
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/IgorTargino/podcastr?color=%2304D361&style=flat">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/IgorTargino/podcastr?style=flat">
+  
+  <a href="https://github.com/IgorTargino/podcastr/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/IgorTargino/podcastr?style=flat">
+  </a>
+    
+   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?style=flat">
+  
+</p>
 
 ![Logo](./github/logo-gh.png)
 
 ## 🧐 Sobre o projeto
 
 Uma aplicação para ouvir podcasts :headphones: 
+<a align="center" target="blank" href="https://podcastr-sage.vercel.app/">
+    <img alt="Site podcastr" src="https://img.shields.io/static/v1?label=site&message=podcastr&color=4953B8&style=flat&logo=vercel">
+</a>
 
+## 🎨 Layout
+
+### Telas Mobile
+
+<div align="center">
+  <img width="100%" src="./github/telas-mobile.png"/>
+</div>
+
+### Telas Desktop
+
+<div align="center">
+  <img width="100%" src="./github/telas-desktop.png"/>
+</div>
 ---
 ## ⚙️ Funcionalidades
 - [x] Header da aplicação;
@@ -25,16 +53,10 @@ Uma aplicação para ouvir podcasts :headphones:
   - [x] Botão de back para retornar a página Home;
 ### Funcionalidades extras
 - [x] Troca de temas da interface(claro e escuro);
-  - [x] Refatoração de css modules para styled components;
   - [x] Tema atual é salvo em localstorage;
-- [x] SideBar;
-  - [x] Botão de logout;
-  - [x] Botão de troca de temas;
-- [x] Página de Login;
-  - [x] Layout completo;
-  - [x] Autenticação com GitHub pelo NextAuth;
-- [x] A aplicação está responsiva;
-- [x] A aplicação está totalmente funcional em produção;
+- [x] Player oculto quando for vázio;
+- [x] Animação;
+- [x] Responsividade;
 
 ---
 ## Como executar o projeto
@@ -65,6 +87,7 @@ ou
 $ npm run dev
 
 # Acesse http://localhost:3000 no seu navagador.
+
 ```
 ## 🚀 Tecnologias 
 Tecnologias utilizadas para desenvolver o projeto:
@@ -75,8 +98,8 @@ Tecnologias utilizadas para desenvolver o projeto:
 - context
 - axios
 - sass
-- rc-slider
-- date-fns
+- lottie
+
 
 ## 🦸‍♂️ **Autor**
 
