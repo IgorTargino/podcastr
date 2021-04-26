@@ -79,7 +79,7 @@ export default function Home({ lattestEpisodes, allEpisodes }: Props) {
         className={!isMobile ? styles.allEpisodesMobile : styles.allEpisodes}
       >
         <h2>Todos lançamentos</h2>
-        {!isMobile ? (
+        {isMobile ? (
           <ul>
             {allEpisodes.map((episode, index) => {
               return (
