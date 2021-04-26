@@ -4,8 +4,6 @@ import Head from "next/head";
 import Link from "next/link";
 import ptBR from "date-fns/locale/pt-BR";
 import { format, parseISO } from "date-fns";
-// import { useMediaQuery } from "react-responsive";
-// import { isMobile } from "react-device-detect";
 import { useWindowSize } from "../Hook/useWindowSize";
 
 import convertDurationToTimeString from "../utils/convertDurationToTimeString";
