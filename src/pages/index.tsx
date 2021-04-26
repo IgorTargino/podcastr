@@ -13,8 +13,6 @@ import { usePlayer } from "../context/PlayerContext";
 import api from "../services/api";
 
 import styles from "./home.module.scss";
-import { useEffect, useState } from "react";
-import { FaRegMap } from "react-icons/fa";
 
 type Episodes = {
   id: string;
@@ -78,45 +76,9 @@ export default function Home({ lattestEpisodes, allEpisodes }: Props) {
           })}
         </ul>
       </section>
-      <section
-        className={isMobile ? styles.allEpisodeMobile : styles.allEpisodes}
-      >
-        <h2>Todos lançamentos</h2>
-
-        {isMobile ? (
-          <ul>
-            {allEpisodes.map((episode, index) => {
-              return (
-                <li key={episode.id}>
-                  <Image
-                    width={192}
-                    height={192}
-                    src={episode.thumbnail}
-                    alt={episode.title}
-                    objectFit="cover"
-                  />
-
-                  <div className={styles.episodeDetails}>
-                    <Link href={`/episodes/${episode.id}`}>
-                      <a>{episode.title}</a>
-                    </Link>
-
-                    <p>{episode.members}</p>
-                    <span>{episode.publishedAt}</span>
-                    <span>{episode.durationAsString}</span>
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={() => playList(episodeList, index + lattestEpisodes.length)}
-                  >
-                    <img src="/play-green.svg" alt="Tocar episodio" />
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-        ) : (
+      <BrowserView>
+        <section className={styles.allEpisodes}>
+          <h2>Todos lançamentos</h2>
           <table cellSpacing={0}>
             <thead>
               <tr>
@@ -164,8 +126,47 @@ export default function Home({ lattestEpisodes, allEpisodes }: Props) {
               })}
             </tbody>
           </table>
-        )}
-      </section>
+        </section>
+      </BrowserView>
+      <MobileView>
+        <section className={styles.allEpisodesMobile}>
+          <h2>Todos lançamentos</h2>
+          <ul>
+            {allEpisodes.map((episode, index) => {
+              return (
+                <li key={episode.id}>
+                  <Image
+                    width={192}
+                    height={192}
+                    src={episode.thumbnail}
+                    alt={episode.title}
+                    objectFit="cover"
+                  />
+
+                  <div className={styles.episodeDetails}>
+                    <Link href={`/episodes/${episode.id}`}>
+                      <a>{episode.title}</a>
+                    </Link>
+
+                    <p>{episode.members}</p>
+                    <span>{episode.publishedAt}</span>
+                    <span>{episode.durationAsString}</span>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      playList(episodeList, index + lattestEpisodes.length)
+                    }
+                  >
+                    <img src="/play-green.svg" alt="Tocar episodio" />
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      </MobileView>
     </div>
   );
 }
