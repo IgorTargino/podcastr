@@ -76,7 +76,7 @@ export default function Home({ lattestEpisodes, allEpisodes }: Props) {
         </ul>
       </section>
       <section
-        className={!isMobile ? styles.allEpisodesMobile : styles.allEpisodes}
+        className={isMobile ? styles.allEpisodesMobile : styles.allEpisodes}
       >
         <h2>Todos lançamentos</h2>
         {isMobile ? (
