@@ -5,6 +5,7 @@ import Link from "next/link";
 import ptBR from "date-fns/locale/pt-BR";
 import { format, parseISO } from "date-fns";
 import { useMediaQuery } from "react-responsive";
+import { isMobile, BrowserView, MobileView } from "react-device-detect";
 
 import convertDurationToTimeString from "../utils/convertDurationToTimeString";
 
@@ -34,7 +35,7 @@ type Props = {
 export default function Home({ lattestEpisodes, allEpisodes }: Props) {
   const { playList } = usePlayer();
 
-  const isMobile = useMediaQuery({ query: "(max-device-width: 768px)" });
+  // const isMobile = useMediaQuery({ query: "(max-device-width: 768px)" });
   const episodeList = [...lattestEpisodes, ...allEpisodes];
 
   return (
