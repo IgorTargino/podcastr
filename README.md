@@ -16,6 +16,7 @@
 ## 🧐 Sobre o projeto
 
 Uma aplicação para ouvir podcasts :headphones: 
+
 <a align="center" target="blank" href="https://podcastr-sage.vercel.app/">
     <img alt="Site podcastr" src="https://img.shields.io/static/v1?label=site&message=podcastr&color=4953B8&style=flat&logo=vercel">
 </a>
