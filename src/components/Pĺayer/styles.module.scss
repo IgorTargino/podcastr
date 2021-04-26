@@ -4,17 +4,31 @@
   height: 100vh;
 
   background: var(--purple-500);
-  color: var(--white);
+  color: var(--background);
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: 768px) {
+    position: fixed;
+    bottom: 0;
+
+    height: 12rem;
+    width: 100%;
+
+    border-radius: 5px 5px 0 0;
+  }
+
   header {
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   strong {
@@ -27,8 +41,20 @@
   }
 }
 
+.emptyContainer {
+  @extend .container;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
 .playingEpisode {
   text-align: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   img {
     border-radius: 1.5rem;
@@ -38,7 +64,7 @@
     display: block;
     padding-top: 2rem;
     padding-bottom: 0.5rem;
-    
+
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.875rem;
@@ -46,7 +72,7 @@
 
   span {
     font: 400 1rem Inter, sans-serif;
-    color: #DCCDFF
+    color: #dccdff;
   }
 }
 
@@ -67,12 +93,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .progress {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 
   font-size: 0.875rem;
 
@@ -88,14 +118,13 @@
 }
 
 .slider {
-  flex: 1 ;
-  
+  flex: 1;
+
   .emptySlider {
     width: 100%;
     height: 4px;
     background: var(--purple-300);
     border-radius: 2px;
-
   }
 }
 
@@ -112,6 +141,13 @@
     font-size: 0;
     transform: filter 0.2;
 
+    @media (max-width: 480px) {
+      img {
+        width: 50%;
+        height: 50%;
+      }
+    }
+
     &:disabled {
       cursor: default;
       opacity: (0.5);
@@ -126,7 +162,8 @@
     }
 
     &.isActive:hover {
-      filter: brightness(0.6) invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+      filter: brightness(0.6) invert(0.35) sepia(1) saturate(3)
+        hue-rotate(100deg);
     }
 
     &.playButton {
@@ -139,10 +176,5 @@
         filter: brightness(0.95);
       }
     }
-
-
   }
-
-
-
 }

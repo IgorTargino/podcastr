@@ -1,7 +1,15 @@
 .wrapper {
   display: flex;
-
+  
   main {
     flex: 1;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    main {
+      margin-bottom: 12rem;
+    }
   }
 }

@@ -31,9 +31,9 @@ type PlayerContextProviderProps = {
   children: ReactNode;
 };
 
-export const PlayerContext = createContext({} as PlayerContextData);
+const PlayerContext = createContext({} as PlayerContextData);
 
-export function PlayerContextProvider({
+function PlayerContextProvider({
   children,
 }: PlayerContextProviderProps) {
   const [episodeList, setEpisodeList] = useState([]);
@@ -120,7 +120,7 @@ export function PlayerContextProvider({
         toggleLoop,
         toggleShuffle,
         setPlayingState,
-        clearPlayerState,
+        clearPlayerState, 
       }}
     >
       {children}
@@ -128,8 +128,10 @@ export function PlayerContextProvider({
   );
 }
 
-export function usePlayer() {
+function usePlayer() {
   const context = useContext(PlayerContext);
 
   return context;
 }
+
+export { PlayerContextProvider, usePlayer };
