@@ -11,7 +11,7 @@
   
 </p>
 
-![Logo](./github/logo-gh.png)
+![Logo](./github/logo-podcastr.png)
 
 ## 🧐 Sobre o projeto
 
