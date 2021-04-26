@@ -5,12 +5,7 @@ interface ThemeContextData {
   toggleDarkMode: () => void;
 }
 
-export const ThemeContext = createContext<ThemeContextData>({
-  isDark: false,
-  toggleDarkMode() {
-    return;
-  },
-});
+export const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData);
 
 const ThemeContextProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(false);
