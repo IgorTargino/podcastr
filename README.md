@@ -35,6 +35,7 @@ Uma aplicação para ouvir podcasts :headphones: <br>
 </div>
 ---
 ## ⚙️ Funcionalidades
+
 - [x] Header da aplicação;
 - [x] Player:
   - [x] Tocar música;
@@ -51,6 +52,7 @@ Uma aplicação para ouvir podcasts :headphones: <br>
   - [x] Descrição e informações do episódio;
   - [x] Botão de play para tocar o episódio;
   - [x] Botão de back para retornar a página Home;
+  
 ### Funcionalidades extras
 - [x] Troca de temas da interface(claro e escuro);
   - [x] Tema atual é salvo em localstorage;
