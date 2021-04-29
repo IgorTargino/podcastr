@@ -16,8 +16,8 @@
   ],
   "theme_color": "#FFFFFF",
   "background_color": "#FFFFFF",
-  "start_url": "/",
+  "start_url": "/?utm_source=pwa",
   "display": "standalone",
   "orientation": "portrair",
-  "prefer_related_applications": "true"
+  "prefer_related_applications": "false"
 }
