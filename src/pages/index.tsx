@@ -39,6 +39,12 @@ export default function Home({ lattestEpisodes, allEpisodes }: Props) {
   
   const isMobile = useWindowSize().width <= 768 ? true : false;
 
+  window.addEventListener("load", () => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  });
+
   setTimeout(() => {
     setIsLoading(false);
   }, 3000);
