@@ -7,3 +7,9 @@ module.exports = withPWA({
     skipWaiting: true,
   },
 });
+
+module.exports = {
+  images: {
+    domains: ['storage.googleapis.com'],
+  }
+}; 
