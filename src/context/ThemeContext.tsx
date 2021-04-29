@@ -1,13 +1,25 @@
-import { createContext, FC, useContext, useEffect, useState } from 'react';
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 interface ThemeContextData {
   isDark: boolean;
   toggleDarkMode: () => void;
 }
 
-export const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData);
+interface ThemeContextProviderProps {
+  children: ReactNode;
+}
 
-const ThemeContextProvider = ({ children }) => {
+export const ThemeContext = createContext<ThemeContextData>(
+  {} as ThemeContextData
+);
+
+const ThemeContextProvider = ({ children }: ThemeContextProviderProps) => {
   const [isDark, setIsDark] = useState(false);
 
   function toggleDarkMode(): void {
