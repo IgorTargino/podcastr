@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "worker/service-worker.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -17,6 +17,8 @@
   "theme_color": "#FFFFFF",
   "background_color": "#FFFFFF",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "orientation": "portrair"
+  "orientation": "portrait",
+  "prefer_related_applications": false
 }

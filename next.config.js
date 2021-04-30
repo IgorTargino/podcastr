@@ -5,5 +5,13 @@ module.exports = withPWA({
     dest: "public",
     register: true,
     skipWaiting: true,
+    sw: "/sw.js",
+    scope: "/"
   },
 });
+
+module.exports = {
+  images: {
+    domains: ['storage.googleapis.com'],
+  }
+}; 
