@@ -19,6 +19,6 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "orientation": "portrait",
+  "orientation": "portrair",
   "prefer_related_applications": false
 }
